@@ -1,0 +1,221 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #F3E8FF 0%, #EFF6FF 50%, #F0FDFA 100%);
+    padding: 2rem 1rem;
+    color: #1F2937;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+h1{
+    font-size: 2.75rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #9333EA, #4F46E5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+.add-task-form {
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    background: #F9FAFB;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.add-task-input:focus {
+    border-color: #A855F7;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15);
+}
+
+.add-task-button {
+    background: #9333EA;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.2s;
+}
+
+.add-task-button:hover {
+    background: #7E22CE;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #E5E7EB;
+    padding: 0 1rem;
+    position: relative;
+    justify-content: center;
+    
+}
+
+.tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #6B7280;
+    position: relative;
+    transition: all 0.2s;
+    align-self: center;
+    font-weight: 500;
+}
+
+.tab:hover {
+    color: #1F2937;
+}
+
+.tab.active {
+    color: #9333EA;
+    font-weight: 600;
+}
+
+.tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #9333EA;
+}
+
+.tab-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #E5E7EB;
+    color: #4B5563;
+    border-radius: 9999px;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+}
+
+.tab.active .tab-count {
+    background: #DDD6FE;
+    color: #7C3AED;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task-list[hidden] {
+    display: none;
+}
+
+.task-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.task-item.completed {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #6B7280;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task-edit-input {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid #D1D5DB;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.task-date {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.task-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button.toggle {
+    color: #9CA3AF;
+}
+
+.icon-button.edit {
+    color: #2563EB;
+}
+
+.icon-button.delete {
+    color: #DC2626;
+}
+
+.icon-button.save {
+    color: #059669;
+}
+
+.icon-button:hover {
+    opacity: 0.8;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
